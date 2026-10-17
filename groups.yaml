@@ -1,0 +1,294 @@
+# Groups — what belongs together on this design (update 30).
+# Written once by Vel on 2026-10-17; edit freely, Vel never rewrites this file.
+# "reset the groups" starts over.
+# owner: the teammate (email, name or user id) who accepts this group's numbers.
+# A row named _goals says who owns the goals; with none, whoever stated the first goal.
+# Any other row with no owner: whoever is working decides.
+- name: Power supplies
+  because: Named supply rails and switched rails identify the board's power distribution.
+  parts: []
+  nets:
+  - GND
+  - GNDF
+  - N12V0A
+  - N12V0_CHA
+  - N12V0_CHB
+  - N13V0
+  - N13V0FIL
+  - N13V0S
+  - P12V0
+  - P12V0A
+  - P12V0F
+  - P12V0FIL
+  - P12V0_CHA
+  - P12V0_CHB
+  - P13V0
+  - P13V0FIL
+  - P13V0S
+  - P2V5A
+  - P3V3
+  - P3V3A
+  - P3V3SW
+  - P3V3_MP
+  - P5V0A
+  - P6SW
+  - P6V0
+  - P6V0A
+  refdes: []
+  files: []
+  owner: null
+- name: PoE power input
+  because: PoE input pairs, converter connections and source status identify the power-over-Ethernet
+    input.
+  parts: []
+  nets:
+  - POE_IN1
+  - POE_IN2
+  - POE_IN3
+  - POE_IN4
+  - POE_VC+
+  - POE_VC-
+  - P12V0POE
+  - PoE_SRC_Status
+  refdes: []
+  files: []
+  owner: null
+- name: Analog inputs and ADCs
+  because: Differential ADC inputs and analog-front-end controls identify the acquisition
+    assembly.
+  parts: []
+  nets:
+  - ADC1_IN2_N
+  - ADC1_IN2_P
+  - ADC2_1_IN5_N
+  - ADC2_1_IN5_P
+  - ADC2_IN2_N
+  - ADC2_IN2_P
+  - ADC3_IN2_N
+  - ADC3_IN2_P
+  - ADC3_IN5_N
+  - ADC3_IN5_P
+  - ADC_0_N
+  - ADC_0_P
+  - ADC_1_N
+  - ADC_1_P
+  - AFE0_A0
+  - AFE0_A1
+  - AFE1_A0
+  - AFE1_A1
+  - AFE_PWR_ON
+  - JADC1_IN2_N
+  - JADC1_IN2_P
+  - JADC2_IN2_N
+  - JADC2_IN2_P
+  - JADC3_IN5_N
+  - JADC3_IN5_P
+  - PC2_ADC3_IN1_N
+  - PC3_ADC3_IN1_P
+  refdes: []
+  files: []
+  owner: null
+- name: Analog outputs and DACs
+  because: DAC differential outputs, update strobes and dedicated supplies identify
+    the output-conversion assembly.
+  parts: []
+  nets:
+  - DAC0R_LDACn
+  - DAC0_LDACn
+  - DAC1R_LDACn
+  - DAC1_LDACn
+  - DAC1_OUT1
+  - DAC1_OUT2
+  - DAC_0_N
+  - DAC_0_P
+  - DAC_1_N
+  - DAC_1_P
+  - DAC_O1_OUT1
+  - DAC_O1_OUT2
+  - DAC_VDDA
+  - DAC_VDDB
+  - DAC_VlogicA
+  - DAC_VlogicB
+  refdes: []
+  files: []
+  owner: null
+- name: Precision voltage references
+  because: Explicit reference voltages and ADC/DAC reference branches identify the
+    precision-reference assembly.
+  parts: []
+  nets:
+  - CPU_REF_P2V048
+  - REF_P1V7066
+  - REF_P2V048
+  - REF_P4V096
+  - REF_P4V096_ADCA
+  - REF_P4V096_ADCB
+  - REF_P4V096_DAC1
+  - REF_P4V096_DAC2
+  - REF_VCC
+  - REF_~{SHDN}
+  refdes: []
+  files: []
+  owner: null
+- name: Ethernet interface
+  because: RMII signals, PHY reset and transmit/receive pairs identify the Ethernet
+    interface.
+  parts: []
+  nets:
+  - AVDDT_PHY
+  - ETH_PHY_NRST
+  - PHY_RD_N
+  - PHY_RD_P
+  - PHY_TD_N
+  - PHY_TD_P
+  - RD_N
+  - RD_P
+  - TD_N
+  - TD_P
+  - RMII_CRS_DV
+  - RMII_MDC
+  - RMII_MDIO
+  - RMII_REF_CLK
+  - RMII_RXD0
+  - RMII_RXD1
+  - RMII_TXD0
+  - RMII_TXD1
+  - RMII_TX_EN
+  refdes: []
+  files: []
+  owner: null
+- name: USB interface
+  because: USB data pairs, identification and VBUS detection identify the USB port
+    circuitry.
+  parts: []
+  nets:
+  - USBJ_N
+  - USBJ_P
+  - USB_ID
+  - USB_N
+  - USB_P
+  - VBUS_DET
+  refdes: []
+  files: []
+  owner: null
+- name: Digital I/O
+  because: Input/output signals, output enables and termination controls identify
+    the digital I/O assembly.
+  parts: []
+  nets:
+  - DI0
+  - DI1
+  - DIO0
+  - DIO1
+  - DO0
+  - DO1
+  - OEn_DO0
+  - OEn_DO1
+  - TERM0
+  - TERM1
+  - TERM_STAT0
+  - TERM_STAT1
+  refdes: []
+  files: []
+  owner: null
+- name: EEM interface
+  because: EEM GPIO, differential lanes and source-power controls identify the expansion
+    interface.
+  parts: []
+  nets:
+  - EEM_GPIO0
+  - EEM_GPIO1
+  - EEM_GPIO2
+  - EEM_GPIO3
+  - Force_EEM_Source
+  - P12V0_EEM
+  - LVDS0_N
+  - LVDS0_P
+  - LVDS1_N
+  - LVDS1_P
+  - LVDS2_N
+  - LVDS2_P
+  - LVDS3_N
+  - LVDS3_P
+  - LVDS4_N
+  - LVDS4_P
+  - LVDS5_N
+  - LVDS5_P
+  - LVDS6_N
+  - LVDS6_P
+  - LVDS7_N
+  - LVDS7_P
+  refdes: []
+  files: []
+  owner: null
+- name: QSPI memory interface
+  because: The QSPI clock, chip select and four data lines identify the external-memory
+    interface.
+  parts: []
+  nets:
+  - QSPI_CLK
+  - QSPI_IO0
+  - QSPI_IO1
+  - QSPI_IO2
+  - QSPI_IO3
+  - QSPI_NCS
+  refdes: []
+  files: []
+  owner: null
+- name: Processor reset and debug
+  because: CPU reset, JTAG signals and revision straps identify processor bring-up
+    and debug circuitry.
+  parts: []
+  nets:
+  - CPU_RESETn
+  - NRST
+  - TCK
+  - TDI
+  - TDO
+  - TMS
+  - REV_ID0
+  - REV_ID1
+  - REV_ID2
+  - REV_ID3
+  refdes: []
+  files: []
+  owner: null
+- name: Status indicators
+  because: Front-panel LED controls and explicitly named LED components identify the
+    indicator assembly.
+  parts: []
+  nets:
+  - FP_LED_0
+  - FP_LED_1
+  - FP_LED_2
+  - FP_LED_3
+  - LED1
+  - LED2
+  - NetLD10_2
+  - NetLD11_2
+  - NetLD12_2
+  - NetLD13_2
+  - NetLD2_2
+  - NetLD2_4
+  - NetLD3_2
+  - NetLD3_4
+  - NetLD4_2
+  - NetLD5_2
+  - NetLD6_1
+  - NetLD7_2
+  - NetLD8_2
+  refdes:
+  - LD1
+  - LD2
+  - LD3
+  - LD4
+  - LD5
+  - LD6
+  - LD7
+  - LD8
+  - LD10
+  - LD11
+  - LD12
+  - LD13
+  files: []
+  owner: null

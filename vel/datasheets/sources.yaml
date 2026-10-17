@@ -1,0 +1,5 @@
+47642-1001:
+  by: python
+  failed: "the manufacturer's site blocks automated downloads (URLError) \u2014 open\
+    \ https://www.molex.com/pdm_docs/sd/476421001_sd.pdf in a browser, save the PDF"
+  url: https://www.molex.com/pdm_docs/sd/476421001_sd.pdf
